@@ -1,0 +1,182 @@
+#Startverdi er satt til sann. 
+startverdi = True
+
+print("Exercise 2 – Article 6 GDPR - Lawfulness of processing:")
+print()
+print("The program only accepts yes or no.")
+print()
+
+while startverdi == True:
+
+    #Spørsmål 1:
+    print()
+    #printer spørsmål
+    print("Question 1: Has the student given consent to the processing of his or her personal data for one or more specific purposes?")
+    #Tar imot input som lagres i question1
+    question1 = input("Please answer yes or no:")
+
+    #Ved no på denne hopper vi rett til spørsmål 2.
+    #Hvis yes på denne kommer subquestions
+
+    if question1 == "yes":
+        print("You answered Yes! This is great. This means that Student have given consent, if you can answer yes on the three next subquestions you will have GDPR Compliance.")
+        #Hvis yes - underspørsmål 1
+        
+        print("Subquestion 1: Can you demonstrate that such consent is given, in accordance with article 7. nr. 1 of the GDPR?")
+        subquestion1 = input("Please answer yes or no:")
+        if subquestion1 == "yes":
+            print("You answered Yes!")
+            print("Subquestion 2: Has the student been informed that the consent can be withdrawn at any time, in accordance with article 7 nr. 3 of the GDPR?")
+            
+        elif subquestion1 == "no":
+            print("You answered No! Make sure you are able to provide proof that such consent is given, according to Article 7 nr. 1 of the GDPR.")
+            print("Subquestion 2: Has the student been informed that the consent can be withdrawn at any time, in accordance with article 7 nr. 3 of the GDPR?")
+        else:
+            print("Cant interpret input!")
+
+        subquestion2 = input("Please answer yes or no:")
+        if subquestion1 == "yes":
+        #Hvis yes - underspørsmål 2
+        
+
+            if subquestion2 == "yes":
+                print("You answered Yes!")
+            elif subquestion2 == "no":
+                print("You answered No! Be sure to let the student know that they can withdraw their consent at any time.")
+            else:
+                print("Cant interpret input!")
+
+        if subquestion2 == "no":
+            print("Subquestion 3: Is it as easy for the student to withdraw the consent as to give it, in accordance with Article 7 nr. 3 of the GDPR?")
+        
+        if subquestion2 == "yes":
+        #Hvis yes - underspørsmål 3
+        
+            print("Subquestion 3: Is it as easy for the student to withdraw the consent as to give it, in accordance with Article 7 nr. 3 of the GDPR?")
+        subquestion3 = input("Please answer yes or no:")
+        if subquestion3 == "yes":
+            print("You answered Yes!")
+        elif subquestion3 == "no":
+            print("You answered No! If you answered yes on the other two subquestions you should create an easy and intuitive way for the student to withdraw the consent, and then you will have GDPR Compliance.")
+        else:
+            print("Cant interpret input!")
+            
+        #forskjellige utfall
+        if subquestion1 == "yes" :
+            if subquestion2 == "yes" :
+                if subquestion3 == "yes" :
+                    print ("GDPR Compliance is in place, but be aware that if the consent is a condition of enrolment to a university it may affect the assessment of whether consent is considered freely given.")
+                    break
+        if subquestion1 == "yes" :
+            if subquestion2 == "no" :
+                if subquestion3 == "no" :
+                    print ("Conclusion: NO GDPR Compliance. Please answer the next questions")
+                    
+        if subquestion1 == "yes" :
+            if subquestion2 == "yes" :
+                if subquestion3 == "no" :
+                    print ("Conclusion: NO GDPR Compliance. Please answer the next questions")
+                    
+        if subquestion1 == "no" :
+            if subquestion2 == "yes" :
+                if subquestion3 == "no" :
+                    print ("Conclusion: NO GDPR Compliance. Please answer the next questions")
+                    
+        if subquestion1 == "no" :
+            if subquestion2 == "no" :
+                if subquestion3 == "yes" :
+                    print ("Conclusion: NO GDPR Compliance. Please answer the next questions")
+                    
+        if subquestion1 == "yes" :
+            if subquestion2 == "no" :
+                if subquestion3 == "yes" :
+                    print ("Conclusion: NO GDPR Compliance. Please answer the next questions")
+                    
+        if subquestion1 == "no" :
+            if subquestion2 == "no" :
+                if subquestion3 == "no" :
+                    print ("Conclusion:NO GDPR Compliance. Please answer the next questions")
+                    
+        if subquestion1 == "no" :
+            if subquestion2 == "yes" :
+                if subquestion3 == "yes" :
+                    print ("Conclusion: NO GDPR Compliance. Please answer the next questions")
+                    
+    #Hvis nei 
+    elif question1 == "no":
+        print("You answered No! Since there no consent there is no GDPR Compliance according to Article 6 nr.1. Please answer the next questions.")
+    else:
+        #Avslutter program ved startverdi = False
+        startverdi = False
+
+    #Spørsmål 2:
+    print()
+    #printer spørsmål
+    print("Question 2: Is processing necessary for the performance of a contract to which the data subject is party or in order to take steps at the request of the data subject prior to entering into a contract?")
+    question2 = input("Please answer yes or no:")
+        
+    if question2 == "yes":
+        #Hvis yes - underspørsmål
+        print("GDPR Compliance")
+        break
+            
+    #Hvis nei 
+    elif question2 == "no":
+        print("NO GDPR Compliance")
+    else:
+        #Avslutter program ved startverdi = False
+        startverdi = False
+
+ #Spørsmål 3:
+    print()
+    #printer spørsmål
+    print("Question 3: Is processing necessary for compliance with a legal obligation to which the controller is subject?")
+    question3 = input("Please answer yes or no:")
+        
+    if question3 == "yes":
+        print("GDPR Compliance")
+        break
+            
+    #Hvis nei 
+    elif question3 == "no":
+        print("NO GDPR Compliance")
+    else:
+        #Avslutter program ved startverdi = False
+        startverdi = False
+
+    #Spørsmål 4:
+    print()
+    #printer spørsmål
+    print("Question 4: Is processing necessary in order to protect the vital interests of the data subject or of another natural person?")
+    question4 = input("Please answer yes or no:")
+        
+    if question4 == "yes":
+        print("GDPR Compliance")
+        break
+            
+    #Hvis nei 
+    elif question4 == "no":
+        print("NO GDPR Compliance")
+    else:
+        #Avslutter program ved startverdi = False
+        startverdi = False
+
+    #Spørsmål 5:
+    print()
+    #printer spørsmål
+    print("Question 5: Is processing necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller?")
+    question5 = input("Please answer yes or no:")
+        
+    if question5 == "yes":
+        print("GDPR Compliance;")
+        break
+            
+    #Hvis nei 
+    elif question5 == "no":
+        print("NO GDPR Compliance")
+    else:
+        #Avslutter program ved startverdi = False
+        startverdi = False
+
+
+
