@@ -37,7 +37,6 @@ while startverdi == True:
         subquestion2 = input("Please answer yes or no:")
         if subquestion1 == "yes":
         #Hvis yes - underspørsmål 2
-        
 
             if subquestion2 == "yes":
                 print("You answered Yes!")
